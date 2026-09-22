@@ -1,4 +1,4 @@
-$!/bin/bash
+#!/bin/bash
 seqkit fx2tab -n -l "$1" | awk '{print $1, $2 * 0.9}' > query_len.txt
 
 tblastn -query "$1" -subject "$2" -outfmt 6 > blast.txt
